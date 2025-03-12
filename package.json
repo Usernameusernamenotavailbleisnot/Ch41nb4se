@@ -1,0 +1,39 @@
+{
+    "name": "ch41nb4se-automation",
+    "version": "1.2.0",
+    "description": "Automation tool for Ch41nb4se Testnet",
+    "main": "index.js",
+    "scripts": {
+      "start": "node index.js",
+      "lint": "eslint .",
+      "test": "jest"
+    },
+    "keywords": [
+      "blockchain",
+      "ethereum",
+      "testnet",
+      "Ch41nb4se",
+      "automation",
+      "bridge"
+    ],
+    "author": "",
+    "license": "MIT",
+    "dependencies": {
+      "axios": "^1.6.2",
+      "chalk": "^4.1.2",
+      "ethers": "^6.9.0",
+      "figlet": "^1.7.0",
+      "https-proxy-agent": "^7.0.2",
+      "lodash": "^4.17.21",
+      "solc": "^0.8.21",
+      "socks-proxy-agent": "^8.0.2",
+      "winston": "^3.11.0"
+    },
+    "devDependencies": {
+      "eslint": "^8.55.0",
+      "jest": "^29.7.0"
+    },
+    "engines": {
+      "node": ">=14.0.0"
+    }
+  }

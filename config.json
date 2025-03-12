@@ -1,0 +1,114 @@
+{
+    "operations": {
+      "bridge": {
+        "enabled": false,
+        "amount": {
+          "min": 0.0001,
+          "max": 0.0004,
+          "decimals": 7
+        },
+        "sepolia_to_chainbase": {
+          "enabled": false,
+          "amount": {
+            "min": 0.0001,
+            "max": 0.0003,
+            "decimals": 7
+          }
+        },
+        "chainbase_to_sepolia": {
+          "enabled": false,
+          "amount": {
+            "min": 0.0001,
+            "max": 0.0003,
+            "decimals": 6
+          }
+        },
+        "repeat_times": 1
+      },
+      "transfer": {
+        "enabled": false,
+        "use_percentage": false,
+        "percentage": 100,
+        "fixed_amount": {
+          "min": 0.001,
+          "max": 0.002,
+          "decimals": 7
+        },
+        "count": {
+          "min": 2,
+          "max": 3
+        },
+        "repeat_times": 2
+      },
+      "contract_deploy": {
+        "enabled": false,
+        "interactions": {
+          "enabled": false,
+          "count": {
+            "min": 3,
+            "max": 8
+          },
+          "types": ["setValue", "increment", "decrement", "reset", "contribute"]
+        }
+      },
+      "contract_testing": {
+        "enabled": false,
+        "test_sequences": ["parameter_variation", "stress_test", "boundary_test"],
+        "iterations": {
+          "min": 2,
+          "max": 3
+        }
+      },
+      "erc20": {
+        "enabled": false,
+        "mint_amount": {
+          "min": 1000000,
+          "max": 10000000
+        },
+        "burn_percentage": 10,
+        "decimals": 18
+      },
+      "nft": {
+        "enabled": false,
+        "mint_count": {
+          "min": 2,
+          "max": 5
+        },
+        "burn_percentage": 20,
+        "supply": {
+          "min": 100,
+          "max": 500
+        }
+      },
+      "batch_operations": {
+        "enabled": false,
+        "operations_per_batch": {
+          "min": 2,
+          "max": 3
+        }
+      }
+    },
+    "general": {
+      "gas_price_multiplier": 1.05,
+      "max_retries": 1,
+      "base_wait_time": 5,
+      "delay": {
+        "min_seconds": 5,
+        "max_seconds": 30
+      },
+      "log_level": "info"
+    },
+    "proxy": {
+      "enabled": false,
+      "type": "http",
+      "rotation": {
+        "enabled": false,
+        "per_operation": false
+      }
+    },
+    "randomization": {
+      "enable": false,
+      "excluded_operations": ["bridge"],
+      "operations_to_run": ["bridge", "transfer", "contract_deploy", "contract_testing", "erc20", "nft", "batch_operations"]
+    }
+  }
